@@ -38,3 +38,8 @@ fn get_triple<T: FromStr + Copy>() -> (T, T, T) {
     let v = get_vec();
     (v[0], v[1], v[2])
 }
+
+#[allow(dead_code)]
+fn get_chars() -> Vec<char> {
+    get_line().chars().collect()
+}
