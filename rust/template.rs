@@ -43,3 +43,18 @@ fn get_triple<T: FromStr + Copy>() -> (T, T, T) {
 fn get_chars() -> Vec<char> {
     get_line().chars().collect()
 }
+
+#[allow(dead_code)]
+fn vec_min(xs: &Vec<i64>) -> i64 {
+    xs.iter().map(|&x|x).fold(std::i64::MAX, std::cmp::min)
+}
+
+#[allow(dead_code)]
+fn vec_max(xs: &Vec<i64>) -> i64 {
+    xs.iter().map(|&x|x).fold(std::i64::MIN, std::cmp::max)
+}
+
+#[allow(dead_code)]
+fn vec_sum(xs: &Vec<i64>) -> i64 {
+    xs.iter().fold(0, |acc, &x| acc+x)
+}
